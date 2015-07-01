@@ -4,9 +4,9 @@ from nio.metadata.properties import VersionProperty
 
 
 @Discoverable(DiscoverableType.block)
-class Example(Block):
+class SparkFun9DOF(Block):
 
-    """ This is the Example block. Put a brief description here. """
+    """ Read from SparkFun 9 Degrees of Freedom Edison board """
 
     version = VersionProperty('0.1.0')
 
