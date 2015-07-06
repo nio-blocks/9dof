@@ -1,24 +1,34 @@
-# Block Template
+SparkFun9DOF
+============
 
-This repository serves as a "starter" repository for creating a new block.
+Read from [SparkFun 9 Degrees of Freedom](https://www.sparkfun.com/products/13033) Edison board.
 
-## How to use
+Sensors are read and a Signal is notified each time a Signal is processed by the block.
 
-### Get the block template
+For more info on the LSM9DS0 view the [datasheet](http://www.st.com/web/en/catalog/sense_power/FM89/SC1448/PF258556). [This guide](http://stephaniemoyerman.com/?p=81) proved extremely useful for figuring out how to read the sensors over i2c.
 
- 1. Fork this repository into your own block
- 1. Clone this repository and rename the folder
+Properties
+----------
+None
 
+Dependencies
+------------
 
-### Rename the appropriate files
+-   [**mraa**](https://github.com/intel-iot-devkit/mraa): Not on PyPI. Follow the install instruction on [sparkfun](https://learn.sparkfun.com/tutorials/installing-libmraa-on-ubilinux-for-edison)
+-   [**numpy**](https://pypi.python.org/pypi/numpy)
 
- 1. Rename `example_block.py` to whatever your block name will be. We like to keep `_block` at the end of filenames that contain blocks.
- 1. In your new block Python file, rename the class to the new block's name. Do **not** put `Block` in the class name - this is implied.
- 1. Rename `test_example_block.py` to match your new block's class name. Always submit accompanying unit tests in the `tests` folder.
- 1. Rename `BLOCK_README.md` to `README.md` and update the documentation accordingly.
+Commands
+--------
+None
 
+Input
+-----
+Any list of signals to trigger sensor read.
 
-## File Reference
+Output
+------
 
- * **example_block.py** : This is the block code. Additional Python classes and files are definitely welcome. If the file contains a Block class, make sure the filename ends with `_block.py`. If the file represents a Base Block that is not discoverable by itself, have the filename end with `_base.py`.
- * **requirements.txt** : List out any Python dependencies this block requires. This file will be installed by pip when the block is installed. The command for installing the dependencies is `pip install -r requirements.txt`.
+-   accelerometer: tuple of (x, y, z)
+-   magnetometer: tuple of (x, y, z)
+-   gyroscope: tuple of (x, y, z)
+-   temperature
