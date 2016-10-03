@@ -102,7 +102,7 @@ class LSM9DS0():
 
         address: i2c address
         register: register of x-axis
-        calibration_factor: the positive range divided by the maximum 
+        calibration_factor: the positive range divided by the maximum
             positive 2-byte signed integer
 
         From datasheet:  If the MSb of the SUB field is ‘1’, the SUB
