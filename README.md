@@ -28,7 +28,11 @@ Any list of signals to trigger sensor read.
 Output
 ------
 
--   accelerometer: tuple of (x, y, z)
--   magnetometer: tuple of (x, y, z)
--   gyroscope: tuple of (x, y, z)
--   temperature
+```
+{
+  accelerometer: tuple of (x, y, z),
+  magnetometer: tuple of (x, y, z),
+  gyroscope: tuple of (x, y, z),
+  temperature
+}
+```

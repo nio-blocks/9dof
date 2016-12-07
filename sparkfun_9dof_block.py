@@ -1,12 +1,12 @@
-from nio.common.block.base import Block
-from nio.common.discovery import Discoverable, DiscoverableType
-from nio.common.signal.base import Signal
-from nio.metadata.properties import VersionProperty
+from nio.block.base import Block
+from nio.util.discovery import discoverable
+from nio.signal.base import Signal
+from nio.properties import VersionProperty
 
 from .lsm9ds0 import LSM9DS0
 
 
-@Discoverable(DiscoverableType.block)
+@discoverable
 class SparkFun9DOF(Block):
 
     """ Read from SparkFun 9 Degrees of Freedom Edison board """
@@ -22,7 +22,7 @@ class SparkFun9DOF(Block):
        try:
            self._lsm9ds0 = LSM9DS0()
        except:
-           self._logger.exception(
+           self.logger.exception(
                'Failed to connect to to LSM9DS. Try running with root privelages.')
 
     def process_signals(self, signals, input_id='default'):
@@ -37,4 +37,4 @@ class SparkFun9DOF(Block):
                                     'gyroscope': g,
                                     'temperature': t}))
         if out_sigs:
-            self.notify_signals(out_sigs, output_id='default')
+            self.notify_signals(out_sigs)
