@@ -9,7 +9,7 @@ For more info on the LSM9DS0 view the [datasheet](http://www.st.com/web/en/catal
 
 Properties
 ----------
-None
+- None: None
 
 Dependencies
 ------------
