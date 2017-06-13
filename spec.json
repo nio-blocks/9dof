@@ -1,19 +1,19 @@
 {
-  "nio/SparkFun9DOF": {
-    "Input": "Any list of signals to trigger sensor read.",
-    "Commands": {},
-    "Category": "Hardware",
-    "Properties": {
-      "None": {
-        "description": "None"
-      }
-    },
-    "Version": "1.0.0",
-    "Description": "Read from [SparkFun 9 Degrees of Freedom](https://www.sparkfun.com/products/13033) Edison board.\nSensors are read and a Signal is notified each time a Signal is processed by the block.\nFor more info on the LSM9DS0 view the [datasheet](http://www.st.com/web/en/catalog/sense_power/FM89/SC1448/PF258556). [This guide](http://stephaniemoyerman.com/?p=81) proved extremely useful for figuring out how to read the sensors over i2c.",
-    "Dependencies": [
-      "-   [**mraa**](https://github.com/intel-iot-devkit/mraa): Not on PyPI. Follow the install instruction on [sparkfun](https://learn.sparkfun.com/tutorials/installing-libmraa-on-ubilinux-for-edison)",
-      "-   [**numpy**](https://pypi.python.org/pypi/numpy)"
-    ],
-    "Output": "```\n{\naccelerometer: tuple of (x, y, z),\nmagnetometer: tuple of (x, y, z),\ngyroscope: tuple of (x, y, z),\ntemperature\n}\n```"
-  }
+    "nio/SparkFun9DOF": {
+        "Output": {
+            "Description": "```\n{\naccelerometer: tuple of (x, y, z),\nmagnetometer: tuple of (x, y, z),\ngyroscope: tuple of (x, y, z),\ntemperature\n}\n```"
+        },
+        "Version": "1.0.0",
+        "Properties": {
+            "None": {
+                "description": "None"
+            }
+        },
+        "Commands": {},
+        "Input": {
+            "Description": "Any list of signals to trigger sensor read."
+        },
+        "Category": "Hardware",
+        "Description": "Read from [SparkFun 9 Degrees of Freedom](https://www.sparkfun.com/products/13033) Edison board.\nSensors are read and a Signal is notified each time a Signal is processed by the block.\nFor more info on the LSM9DS0 view the [datasheet](http://www.st.com/web/en/catalog/sense_power/FM89/SC1448/PF258556). [This guide](http://stephaniemoyerman.com/?p=81) proved extremely useful for figuring out how to read the sensors over i2c."
+    }
 }
