@@ -18,12 +18,12 @@ class SparkFun9DOF(Block):
         self._lsdm9ds0 = None
 
     def configure(self, context):
-       super().configure(context)
-       try:
-           self._lsm9ds0 = LSM9DS0()
-       except:
-           self.logger.exception(
-               'Failed to connect to to LSM9DS. Try running with root privelages.')
+        super().configure(context)
+        try:
+            self._lsm9ds0 = LSM9DS0()
+        except:
+            self.logger.exception('Failed to connect to to LSM9DS.'
+                                  ' Try running with root privelages.')
 
     def process_signals(self, signals, input_id='default'):
         out_sigs = []
