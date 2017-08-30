@@ -3,13 +3,13 @@ import numpy
 
 
 class LSM9DS0():
-    ''' Used for i2c communication with LSM9DS0 chip
+    """ Used for i2c communication with LSM9DS0 chip
 
     All config settings information found in datasheet:
     http://www.adafruit.com/datasheets/LSM9DS0.pdf
 
     Code inspired by https://github.com/smoyerman/9dofBlock
-    '''
+    """
 
     WHO_AM_I = 0x0F
 
@@ -77,7 +77,7 @@ class LSM9DS0():
         self._i2c.writeReg(self.CTRL_REG1_G, 0x0F)
 
     def _enable_temperature(self):
-        ## 0xF0: Enabled, high res, 100 Hz
+        # 0xF0: Enabled, high res, 100 Hz
         self._i2c.address(self.XM)
         self._i2c.writeReg(self.CTRL_REG5_XM, 0xF0)
 

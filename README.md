@@ -1,33 +1,31 @@
 SparkFun9DOF
 ============
-
-Read from [SparkFun 9 Degrees of Freedom](https://www.sparkfun.com/products/13033) Edison board.
-
-Sensors are read and a Signal is notified each time a Signal is processed by the block.
-
-For more info on the LSM9DS0 view the [datasheet](http://www.st.com/web/en/catalog/sense_power/FM89/SC1448/PF258556). [This guide](http://stephaniemoyerman.com/?p=81) proved extremely useful for figuring out how to read the sensors over i2c.
+Read from [SparkFun 9 Degrees of Freedom](https://www.sparkfun.com/products/13033) Edison board. Sensors are read and a Signal is notified each time a Signal is processed by the block. For more info on the LSM9DS0 view the [datasheet](http://www.st.com/web/en/catalog/sense_power/FM89/SC1448/PF258556). [This guide](http://stephaniemoyerman.com/?p=81) proved extremely useful for figuring out how to read the sensors over i2c.
 
 Properties
 ----------
-- None: None
+None
 
-Dependencies
-------------
+Inputs
+------
+- **default**: Any list of signals to trigger sensor read.
 
--   [**mraa**](https://github.com/intel-iot-devkit/mraa): Not on PyPI. Follow the install instruction on [sparkfun](https://learn.sparkfun.com/tutorials/installing-libmraa-on-ubilinux-for-edison)
--   [**numpy**](https://pypi.python.org/pypi/numpy)
+Outputs
+-------
+- **default**: A list of signals with the following attributes: accelerometer, magnetomoter, gyroscope, temperature.
 
 Commands
 --------
 None
 
-Input
------
-Any list of signals to trigger sensor read.
+Dependencies
+------------
+-   [**mraa**](https://github.com/intel-iot-devkit/mraa): Not on PyPI. Follow the install instruction on [sparkfun](https://learn.sparkfun.com/tutorials/installing-libmraa-on-ubilinux-for-edison)
+-   [**numpy**](https://pypi.python.org/pypi/numpy)
 
-Output
-------
 
+Output Example:
+---------------
 ```
 {
   accelerometer: tuple of (x, y, z),
@@ -36,3 +34,4 @@ Output
   temperature
 }
 ```
+

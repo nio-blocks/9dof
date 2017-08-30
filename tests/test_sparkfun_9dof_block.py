@@ -1,6 +1,6 @@
 import sys
 from unittest.mock import patch, MagicMock
-from collections import defaultdict
+
 from nio.signal.base import Signal
 from nio.testing.block_test_case import NIOBlockTestCase
 from nio.block.terminals import DEFAULT_TERMINAL
