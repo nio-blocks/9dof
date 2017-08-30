@@ -1,7 +1,7 @@
 {
   "nio/SparkFun9DOF": {
     "language": "Python",
-    "version": "0.0.1",
-    "url": "git://github.com/nio-blocks/sparkfun_9dof.git"
+    "url": "git://github.com/nio-blocks/sparkfun_9dof.git",
+    "version": "0.1.0"
   }
 }

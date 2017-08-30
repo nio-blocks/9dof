@@ -1,12 +1,10 @@
 from nio.block.base import Block
-from nio.util.discovery import discoverable
 from nio.signal.base import Signal
 from nio.properties import VersionProperty
 
 from .lsm9ds0 import LSM9DS0
 
 
-@discoverable
 class SparkFun9DOF(Block):
 
     """ Read from SparkFun 9 Degrees of Freedom Edison board """
