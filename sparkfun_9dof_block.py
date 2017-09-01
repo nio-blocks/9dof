@@ -9,7 +9,7 @@ class SparkFun9DOF(Block):
 
     """ Read from SparkFun 9 Degrees of Freedom Edison board """
 
-    version = VersionProperty('0.1.0')
+    version = VersionProperty("0.1.0")
 
     def __init__(self):
         super().__init__()
