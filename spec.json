@@ -1,7 +1,7 @@
 {
   "nio/SparkFun9DOF": {
     "version": "0.1.1",
-    "description": "Read from [SparkFun 9 Degrees of Freedom](https://www.sparkfun.com/products/13033) Edison board. Sensors are read and a Signal is notified each time a Signal is processed by the block. For more info on the LSM9DS0 view the [datasheet](http://www.st.com/web/en/catalog/sense_power/FM89/SC1448/PF258556).",
+    "description": "Visit [SparkFun Block for Intel Edison - 9 Degrees of Freedom](https://www.sparkfun.com/products/13033) for more information. Sensors are read and a signal is emitted each time a signal is processed by the block. For more information on the LSM9DS0, view the [datasheet](https://cdn.sparkfun.com/assets/f/6/1/f/0/LSM9DS0.pdf).",
     "categories": [
       "Hardware"
     ],
@@ -13,7 +13,7 @@
     },
     "outputs": {
       "default": {
-        "description": "A list of signals with the following attributes: accelerometer, magnetomoter, gyroscope, temperature."
+        "description": "A list of signals with the following attributes: accelerometer, magnetometer, gyroscope, temperature."
       }
     },
     "commands": {}
